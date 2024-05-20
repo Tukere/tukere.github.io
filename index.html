@@ -1,9 +1,187 @@
-<html>
+@page
 
-<body>
-  <h1>Tukere</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+<div class="mainWrapper">
 
-</html>
+
+    <input id="preVal" type="hidden" value="{&quot;inputs&quot;: [{&quot;DataLabel&quot;: &quot;Textbox127&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox128&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox19&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox21&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox125&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox126&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox13&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox16&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox129&quot;, &quot;Value&quot;:&quot;&amp;nbsp;&quot;},{&quot;DataLabel&quot;: &quot;Textbox130&quot;, &quot;Value&quot;:&quot;&amp;nbsp;&quot;},{&quot;DataLabel&quot;: &quot;Textbox23&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox26&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox131&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox132&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox28&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox30&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox123&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox124&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox9&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox11&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox120&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox121&quot;, &quot;Value&quot;:&quot;00.0%&quot;},{&quot;DataLabel&quot;: &quot;Textbox6&quot;, &quot;Value&quot;:&quot;(000 services out of a total of 000 services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox8&quot;, &quot;Value&quot;:&quot;(000 services out of 000 planned services)&quot;},{&quot;DataLabel&quot;: &quot;Textbox100&quot;, &quot;Value&quot;:&quot;Analysing Performance.&quot;}]}" />
+
+    <!-- main wrapper -->
+    <div class="wrapperTopSpace"></div>
+    <div class="header">
+        <!-- header -->
+        <div id="serverStatusMessage" style="display: none; color: red; font-size: 48px;">
+            Server is currently down. Retrying...
+        </div>
+        <div class="wrapper">
+
+            <h1>AOR Train Performance: <span id="Textbox101"></span></h1>
+            <h1><span style="font-size: 70%;">Updated:</span> <span id="Textbox100" style="font-size: 70%;"></span></h1>
+
+
+
+            <!--<h3 id="Textbox100">12/8/2014 7:31:41 PM</h3> -->
+        </div>
+        <!-- //header -->
+    </div>
+
+    <div class="contentPanel">
+        <!-- body -->
+        <div class="wrapper">
+            <ul class="timeZoneUL">
+                <li class="totalNetwork">
+                    <div class="timeZoneBox">
+                        <h2>Total Network</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox120" data-label="Textbox120">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox6">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox121">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox8">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="westernLine">
+                    <div class="timeZoneBox">
+                        <h2>Western Line</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox123">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox9">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox124">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox11">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="easternLine">
+                    <div class="timeZoneBox">
+                        <h2>Eastern Line</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox125">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox13">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox126">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox16">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="southernLine">
+                    <div class="timeZoneBox">
+                        <h2>Southern Line</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox127">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox19">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox128">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox21">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="pukekoheShuttle">
+                    <div class="timeZoneBox">
+                        <h2>Pukekohe Extension</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox129">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox23">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox130">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox26">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="onehungaLine">
+                    <div class="timeZoneBox">
+                        <h2>Onehunga Line</h2>
+                        <div class="timeZoneDescriptionPanel">
+                            <ul class="timeZonePunctualityUL">
+                                <li>
+                                    <h1 id="Textbox131">&nbsp;</h1>
+                                    <h3>Punctuality*</h3>
+                                    <p id="Textbox28">(0 services out of a total of 0 services)</p>
+                                </li>
+                                <li>
+                                    <h1 id="Textbox132">&nbsp;</h1>
+                                    <h3>Reliability**</h3>
+                                    <p id="Textbox30">(0 services out of 0 planned services)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="endnotes">
+                <ul class="endnotesUL">
+                    <li>* Arrival with in 5 minutes of schedule at final destination</li>
+                    <li>** Arrival without being cancelled </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+
+            <ul class="footerLogosUL">
+                <li><img src="~/../images/logo-AOR.png" /></li>
+            </ul>
+
+        </div> <!-- end of wrapper-->
+    </div> <!--end of contentPanel -->
+    <!-- Table section -->
+    <div class="tableSection">
+        <table id="spadTable">
+            <thead>
+                <tr>
+                    <th>Last SPAD</th>
+                    <th>Days SPAD Free</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table data will be dynamically filled by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+
+</div> <!--end of mainWrapper-->
+<!--<script src="~/bundles/testScript.js"></script> -->
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+
+<script src="~/js/Visi_Logging.js?v=011"></script>
+
+
+
+<script src="~/js/Visi_SignalRFunctions.js?v=20240408"></script>
+
+
